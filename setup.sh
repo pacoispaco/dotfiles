@@ -18,11 +18,11 @@ function moveoriginals () {
     fi;
     for file in $dotfiles; do
         if [ -e ~/$file ]; then
-            if [ ! -L ~/$file ]; then 
+            if [ ! -L ~/$file ]; then
                 printf "Move %s to %s ... " "$file" $originalsdir
                 mv ~/$file $originalsdir
                 printf "ok\n"
-            fi; 
+            fi;
         else
             printf "Original dotfile %s not found. No copy moved to %s\n" "$file" "$originalsdir"
         fi;
@@ -35,7 +35,7 @@ function createlinks () {
         printf "Link ~/%s to %s ... " "$file" "$dotfilesdir/$file"
         ln -sf $dotfilesdir/$file ~/$file
         printf "ok\n"
-    done    
+    done
     # Source BASH files
     printf "Source ~/.bashrc ... "
     source ~/.bashrc
