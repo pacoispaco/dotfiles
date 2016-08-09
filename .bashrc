@@ -117,3 +117,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Set up PATH to include my dotfiles/scripts
+PATH=$PATH:~/proj/dotfiles/scripts
+
+# Set up Eiffel environment
+export ISE_EIFFEL=/usr/local/Eiffel_16.05
+export ISE_PLATFORM=linux-x86-64
+export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
