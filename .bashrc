@@ -125,3 +125,6 @@ PATH=$PATH:~/proj/dotfiles/scripts
 export ISE_EIFFEL=/usr/local/Eiffel_16.05
 export ISE_PLATFORM=linux-x86-64
 export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
+
+# Set up Rust environment
+export PATH=$PATH:~/.cargo/bin 
