@@ -128,3 +128,7 @@ export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
 
 # Set up Rust environment
 export PATH=$PATH:~/.cargo/bin 
+
+# Set up path to Microsoft mssql-tools programs
+# See: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools
+export PATH="$PATH:/opt/mssql-tools/bin"
