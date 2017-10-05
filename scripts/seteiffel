@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+# Script for setting up Eiffel environment
+# Copyright (c) 2016 Paul Cohen
+
+# Constants
+eiffelversions="15.08 16.05"
+eiffelversiondefault="16.05"
+
+# Initialize our own variables:
+version=$eiffelversiondefault
+uname_p=$(uname -p)
+if [ "$uname_p" == "x86_64" ]; then
+    architecture="x86-64"
+fi;
+
+function show_help () {
+    printf "Usage: %s [-h] [-l] [-v:]\n" ${0##*/} 
+    printf "Set up Eiffel environment.\n\n"
+    printf "    -h      display this help and exit\n"
+    printf "    -l      display architecture and list available versions\n"
+    printf "    -v      set environment to use this version\n"
+}
+
+function display_architecture_and_versions () {
+    printf "Architecture: %s\n" $architecture
+    printf "Version: %s\n" $eiffelversions
+}
+
+function setup_environment () {
+    export ISE_EIFFEL=/usr/local/EiffelXX
+    export ISE_PLATFORM=linux-x86
+    export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
+}
+
+# A POSIX variable
+OPTIND=1         # Reset in case getopts has been used previously in the shell.
+
+while getopts "h?l?v" opt; do
+    case "$opt" in
+    h|\?)
+        show_help
+        exit 0
+        ;;
+    v)  version=$OPTARG
+        ;;
+    l)  display_architecture_and_versions
+        exit 0
+        ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+printf "version: %s, architecture: %s\n" $version $architecture
