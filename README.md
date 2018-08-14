@@ -14,10 +14,12 @@ I am using Vundle for handling vim plugins.
 
 ## Install
 
- 1. $ git clone https://github.com/pacoispaco/dotfiles.git ~/proj/dotfiles
+```
+$ git clone https://github.com/pacoispaco/dotfiles.git ~/proj/dotfiles
 
- 2. $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
- 3. $ ~/proj/dotfiles/setup.sh
+$ ~/proj/dotfiles/setup.sh
 
- 4. $ vim +PluginInstall
+$ vim +PluginInstall
+```
