@@ -17,7 +17,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ajorgensen/vim-markdown-toc'
+Plugin 'mzlogin/vim-markdown-toc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
