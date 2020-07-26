@@ -62,6 +62,9 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" For HTML files we make tab 2 spaces
+autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 " Set upp vim-airline
 " -------------------
 
