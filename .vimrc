@@ -50,7 +50,7 @@ set fileencodings=utf-8
 
 silent! colorscheme mustang
 
-au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile *.md setlocal textwidth=100
 
 " Indents and tabs
 " ----------------
