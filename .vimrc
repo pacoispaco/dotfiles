@@ -50,8 +50,8 @@ set fileencodings=utf-8
 
 silent! colorscheme mustang
 
-" Indents, tabs and textwith
-" --------------------------
+" Indents, tabs and textwidth
+" ---------------------------
 
 " show existing tab with 4 spaces width
 set tabstop=4
