@@ -61,7 +61,7 @@ set tabstop=4
 set shiftwidth=4
 " on pressing tab, insert 4 spaces
 set expandtab
-" on reaching 100 characters, enter line break
+" on reaching 100 characters, insert line break
 set textwidth=100
 
 " For HTML files we make tab 2 spaces
