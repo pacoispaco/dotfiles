@@ -52,15 +52,17 @@ silent! colorscheme mustang
 
 au BufRead,BufNewFile *.md setlocal textwidth=100
 
-" Indents and tabs
-" ----------------
+" Indents, tabs and textwith
+" --------------------------
 
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
+" on pressing tab, insert 4 spaces
 set expandtab
+" on reaching 100 characters, enter line break
+set textwidth=100
 
 " For HTML files we make tab 2 spaces
 autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
