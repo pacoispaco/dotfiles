@@ -1,4 +1,4 @@
-" vim configuration file for Paul Cohen
+" vim configuration file for Paul Cohen (https://github.com/pacoispaco/dotfiles)
 
 " Vundle stuff
 " ------------
@@ -18,6 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mzlogin/vim-markdown-toc'
+Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,8 +66,8 @@ set textwidth=100
 " For HTML files we make tab 2 spaces
 autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
-" Set upp vim-airline
-" -------------------
+" Set up vim-airline
+" ------------------
 
 " For info on settings see:
 " https://github.com/vim-airline/vim-airline/blob/master/doc/airline.txt
@@ -78,3 +79,29 @@ set laststatus=2
 " Enable powerline fonts
 let g:airline_powerline_fonts=1
 let g:airline_theme = 'powerlineish'
+
+" Set up YouCompleteMe
+" --------------------
+"
+" This configuration is as described here:
+" https://clay-atlas.com/us/blog/2021/07/04/vim-en-you-complete-me-plugin-auto-code/
+" For info on other settings for YCM and Python, see:
+" https://github.com/ycm-core/YouCompleteMe#configuring-through-vim-options
+"
+"let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+"let g:ycm_confirm_extra_conf=0
+"let g:ycm_python_binary_path='/usr/bin/python3'
+
+" This configuration is as described here:
+" https://github.com/ycm-core/YouCompleteMe#configuring-through-vim-options
+"
+let g:ycm_python_interpreter_path = ''
+let g:ycm_python_sys_path = []
+let g:ycm_extra_conf_vim_data = [
+  \  'g:ycm_python_interpreter_path',
+  \  'g:ycm_python_sys_path'
+  \]
+let g:ycm_global_ycm_extra_conf = '~/.global_extra_conf.py'
+
+" Configure YCM to close preview window on return.
+let g:ycm_autoclose_preview_window_after_insertion = 1
