@@ -17,8 +17,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'mzlogin/vim-markdown-toc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,8 +36,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 " End of Vundle stuff
 
-" Basic stuff
-" -----------
+" Basic config
+" ------------
 
 set number
 set ruler
@@ -49,7 +49,22 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 
-silent! colorscheme mustang
+" Colors and colorscheme
+" ----------------------
+
+" You might have to force true color when using regular vim inside tmux as the
+" colorscheme can appear to be grayscale with "termguicolors" option enabled.
+" See: https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6
+if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+syntax enable
+set termguicolors
+
+silent colorscheme gruvbox
+set background=dark         " gruvbox dark mode
 
 " Indents, tabs and textwidth
 " ---------------------------
@@ -73,7 +88,7 @@ autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabs
 " https://github.com/vim-airline/vim-airline/blob/master/doc/airline.txt
 
 " Set up terminal colors
-set t_Co=256
+"set t_Co=256
 " Make statusline appears all the time
 set laststatus=2
 " Enable powerline fonts
