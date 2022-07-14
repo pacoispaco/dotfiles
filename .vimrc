@@ -53,7 +53,7 @@ set fileencodings=utf-8
 " ----------------------
 
 " You might have to force true color when using regular vim inside tmux as the
-" colorscheme can appear to be grayscale with "termguicolors" option enabled.
+" colorscheme can appear to be grayscale with 'termguicolors' option enabled.
 " See: https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6
 if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
