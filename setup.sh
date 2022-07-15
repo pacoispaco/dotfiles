@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Script for setting up symlinks to dotfiles
-# Copyright (c) 2016 Paul Cohen
+# Copyright (c) 2016, 2022 Paul Cohen
 
 set -e
 
-dotfilesdir=~/proj/dotfiles             # Dotfiles directory
-dotfiles=".bashrc .vimrc"               # List of dotfiles to symlink
+dotfilesdir=~/proj/github/dotfiles      # Dotfiles directory
+dotfiles=".bashrc .vimrc .tmux.conf"    # List of dotfiles to symlink
 originalsdir=$dotfilesdir/originals     # Directory with original dotfiles
 
 function moveoriginals () {
