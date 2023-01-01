@@ -10,6 +10,8 @@ I am using Vundle for handling vim plugins.
 
 ## Install
 
+First make sure that Vim and Python3 is installed.
+
 ```
 $ git clone https://github.com/pacoispaco/dotfiles.git ~/proj/guthub/dotfiles
 
