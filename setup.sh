@@ -6,7 +6,7 @@ set -e
 
 dotfilesdir=~/proj/github/dotfiles      # Dotfiles directory
 # List of dotfiles to symlink
-dotfiles=".bashrc .vimrc .tmux.conf .gitconfig"
+dotfiles=".bashrc .vimrc .tmux.conf .gitconfig .global_extra_conf.py"
 originalsdir=$dotfilesdir/originals     # Directory with original dotfiles
 
 function moveoriginals () {
