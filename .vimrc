@@ -19,6 +19,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'mzlogin/vim-markdown-toc'
+Plugin 'mattn/emmet-vim'
+Plugin 'preservim/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,6 +82,12 @@ set textwidth=100
 
 " For HTML files we make tab 2 spaces
 autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" Configure NERDTree
+" Easy toggling of NERDTree
+nmap <F6> :NERDTreeToggle<CR>
+" Show hidden files by default
+let NERDTreeShowHidden=1
 
 " Set up vim-airline
 " ------------------
