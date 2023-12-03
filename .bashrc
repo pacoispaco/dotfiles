@@ -144,5 +144,14 @@ export PATH=$PATH:~/.cargo/bin
 # See: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools
 export PATH="$PATH:/opt/mssql-tools/bin"
 
+# Set up alias for neovim appimage
+alias nvim="nvim.appimage"
+
+# Define function/alias for displaying text files without comment lines (beginning with '#')
+show() {
+  echo "Displaying uncommented lines (not beginning with '#') in "$1":"
+  egrep -v '(^#|^\s*$|^\s*\t*#)' $1
+}
+
 # Set standard editor
-export EDITOR=vim
+export EDITOR=nvim
