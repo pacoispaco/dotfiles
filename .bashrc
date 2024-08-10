@@ -144,9 +144,6 @@ export PATH=$PATH:~/.cargo/bin
 # See: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools
 export PATH="$PATH:/opt/mssql-tools/bin"
 
-# Set up alias for neovim appimage
-alias nvim="nvim.appimage"
-
 # Define function/alias for displaying text files without comment lines (beginning with '#')
 show() {
   echo "Displaying uncommented lines (not beginning with '#') in "$1":"
@@ -155,3 +152,9 @@ show() {
 
 # Set standard editor
 export EDITOR=nvim
+
+# Set up nvm (Node Version Manager) for managing Node.js versions.
+# See: https://github.com/nvm-sh/nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
