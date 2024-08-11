@@ -158,3 +158,8 @@ export EDITOR=nvim
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Change colors for jq so that null is red and visible.
+# See: https://jqlang.github.io/jq/manual/#colors
+export JQ_COLORS="1;31:0;37:0;37:0;37:0;32:1;37:1;37:1;34"
+
